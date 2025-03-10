@@ -1,0 +1,10 @@
+services:
+  readmeclassifier:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: readmeclassifier_container
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true

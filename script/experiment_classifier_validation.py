@@ -76,7 +76,7 @@ if __name__ == '__main__':
                 
         features_tfidf = pandas.DataFrame(tfidfX.todense())
         # Assign column names to make it easier to print most useful features later
-        features_tfidf.columns = tfidf.get_feature_names()
+        features_tfidf.columns = tfidf.get_feature_names_out()
         features_combined = pandas.concat([features_tfidf, derived_features], axis=1)
         
         logging.info('Combined features shape:')
